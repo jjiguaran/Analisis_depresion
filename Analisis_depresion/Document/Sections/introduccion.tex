@@ -1,0 +1,14 @@
+\section{Introducción}
+ Las salud mental es un componente fundamental dentro de la salud humana, y esta relevancia esta evidenciando tener aumento creciente tanto a nivel social, como de programas de política publica relacionadas con este tema \cite{world2018mental}.
+ Dentro de este contexto, cabe resaltar que las condiciones mas prevalentes en la población mundial son la ansiedad y la depresión respectivamente \cite{james2018global}. 
+ \medbreak
+La  adecuada identificación y diagnostico de las condiciones mentales en general y de la ansiedad y la depresión en particular, suponen un desafió a los profesionales de la salud debido en gran medida por la interpretación subjetiva de los patrones de pensamiento y conducta evidenciados en los pacientes \cite{beck1961inventory}. 
+ \medbreak
+Dentro de este marco surgen las técnicas de diagnostico conocidas como los cuestionarios de auto relato cuyo objetivo es proveer una detección objetiva sobre la condición del paciente mediante basado en la enunciación de declaraciones propias de síntomas y actitudes características de la condición en cuestión, en donde el paciente proporciona un valor numérico dentro de una escala en la medida en que se sienta mas o menos identificado con dicha declaración. 
+ \medbreak
+El Depression Anxiety Stress Scale, DASS 42, es uno de dichos cuestionarios en donde se presentan 42 enunciados, 14 para cada condición y el evaluado califica la enunciación de 1 a 4 dependiendo su nivel de afinidad en la ultima semana. Luego, para cada condición se suman los valores de todos los enunciados que la componen y este resultado se ubica dentro de un grado de severidad que va desde normal hasta extremadamente severo  dependiendo de su valor  \cite{parkitny2010depression}. 
+ \medbreak
+El siguiente trabajo tiene por objetivo aplicar técnicas de aprendizaje supervisado y no supervisado sobre una base de datos de respuestas al DASS 42 ofrecidos por usuarios de manera anónima a través de la pagina web https://openpsychometrics.org, cuyo objetivo es proveer data abierta y anónima que permita la investigación en psicología. 
+ \medbreak
+Inicialmente se entrena un algoritmo de aprendizaje supervisado, específicamente un random forest en donde una vez seleccionado los mejores hiperparametros, se estimara la importancia de las variables obtenido para intentar entender el poder predictivo de las variables a la hora de diagnosticar.  Luego se aplican técnicas de clustering sobre los datos que incluyen además de las respuestas al cuestionario, información demográfica y sobre la personalidad de las personas y se aprecia si existe una semejanza entre los clusters formados y el diagnostico obtenido a través del test. 
+ \medbreak

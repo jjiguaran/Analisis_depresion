@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{preamble/PrePack}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{dirtytalk}
+\usepackage{float}
+\usepackage{array}
+\usepackage{appendix}
+\usepackage{graphicx}
+\usepackage[sorting=none]{biblatex}
+\addbibresource{bibliography.bib}
+
+
+\input{preamble/BaseMathCommands}
+
+\usepackage[spanish]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\input{Sections/Intro/titlepage}
+
+
+% Inserting the table of contents
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+
+% Inserting the list of figures
+\newpage
+\listoffigures
+
+% Inserting the list of tables
+\listoftables
+
+
+
+% Inserting the Introduction to the part
+\newpage
+\pagenumbering{arabic}
+\input{Sections/introduccion}
+
+% Inserting the Conclusion section
+\newpage
+\input{Sections/datos}
+
+% Inserting the Conclusion section
+\newpage
+\input{Sections/metodologia}
+
+% Inserting the Conclusion section
+\newpage
+\input{Sections/resultados}
+
+
+
+
+% The following sections will vary according to the FATT so please insert the ones which you think are relevant to your role
+\newpage
+
+% Inserting the Conclusion section
+\newpage
+\input{Sections/conclusion}
+
+
+\printbibliography
+
+% Inserting the Appendix
+\newpage
+\input{Sections/Appendix/appendix1}
+
+
+
+\end{document}

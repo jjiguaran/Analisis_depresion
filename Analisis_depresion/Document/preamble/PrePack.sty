@@ -1,0 +1,156 @@
+\ProvidesPackage{PrePack}%begin preamble 
+
+
+    % Font Related Stuff 
+%\usepackage[osf]{Alegreya,AlegreyaSans}
+%%f
+%\usepackage{mathpazo} % add possibly `sc` and `osf` options
+
+%\usepackage{eulervm}
+\usepackage{bm}
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax
+
+\usepackage[table, dvipsnames]{xcolor}
+
+    %% Math Related Packages %% 
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{mathtools} %Pfeile
+\usepackage{mathrsfs} %Laplace L
+\usepackage{algorithmicx}
+\usepackage{extarrows} % for more arrow options
+\usepackage{algorithm}
+\usepackage{xfrac} % for \xfrac macro
+\usepackage{nicefrac} % for \nicefrac macro
+\usepackage{diffcoeff}
+\usepackage{epsfig}
+\usepackage{esvect} % for vectors
+\usepackage{bm} 
+\usepackage{rotating}
+\usepackage{extsizes} % for different fonts
+\usepackage{tensor} %this is for tensors and some other fuckery. IDK 
+
+
+
+    %% Graphic Related %%
+
+\usepackage{float} %pictures
+\usepackage{graphicx} % Required for the inclusion of images
+\graphicspath{ {figures/} }
+\usepackage{wrapfig}% Used to wrap text around pictures
+\usepackage{epstopdf}
+
+    %% Symbols And Related %% 
+
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{gensymb} %symbols
+\usepackage{nomencl} %generate list of symbols
+\makenomenclature
+\renewcommand{\nomname}{List of Symbols}
+\usepackage{import} %for importing
+
+
+
+    %% URL Stuff %%
+
+\usepackage{url} %url for table of contents url
+%reference back to TOC
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+    %% Structures %%
+
+%packages for finding list of tables and figures
+
+\usepackage{array}
+\usepackage{enumitem} % Used to compact lists
+\usepackage{multicol} %for columns
+\usepackage{enumitem} %enumerate
+\newlist{Prop}{enumerate}{2}
+\setlist[Prop]{label=Property \arabic*.,itemindent=*}
+
+
+
+
+    %% Colours %% 
+
+
+    %% Plotting %%
+\usepackage{pgfplots} %for plotting data
+\usepackage{csvsimple} %load csv data
+\usepackage{calc} %calculator package
+\usepackage{asymptote}
+\usepackage{diagbox}
+\usepackage{subcaption}
+
+%for drawing 
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+
+\usepackage{pdflscape}%for landscape
+\usepackage{rotating}
+\usepackage{everypage}
+
+
+%begin{framed} ......
+\usepackage{framed}
+
+\usepackage{setspace}
+
+
+    %% List of Symbols %%
+
+\usepackage{nomencl} %generate list of symbols
+\makenomenclature
+\renewcommand{\nomname}{List of Symbols}
+
+
+\usepackage{verbatim} %verbatim
+\usepackage{listings} % for putting in code
+% for listings
+
+
+    %% Bibliography %%
+    
+%table of contents and stuff
+\usepackage{tocloft}
+\usepackage[nottoc]{tocbibind} %bibliography
+
+
+
+    %% Documentation %%
+
+%for custom indent
+\newlength{\tabcont}
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+\usepackage{empheq}
+\usepackage{multirow,booktabs}
+\usepackage{fullpage}
+\usepackage{lastpage}
+%for margins
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+\usepackage{microtype} % for micro-typographical adjustments
+\usepackage{setspace} % for line spacing
+\usepackage{lettrine} % for drop caps and awesome chapter
+\usepackage{color,soul} % for highlighting
+\usepackage{makecell, cellspace, caption} % for highlighting cell
+\usepackage{nomencl} %generate list of symbols
+\makenomenclature
+\renewcommand{\nomname}{List of Symbols} %generate list of symbols
+\usepackage{comment} % for commenting out sections
+
+\usepackage[numbered,autolinebreaks,useliterate]{preamble/mcode}
+\usepackage{pdfpages}
+%misc
+
+%%%%% End of Preamb

@@ -1,0 +1,108 @@
+\section{Metodología}
+
+El presente análisis tiene por objetivo descubrir y exponer conocimiento a través de dos tipos de análisis: Aprendizaje supervisado y aprendizaje no supervisado.
+
+\subsection{Aprendizaje supervisado}
+Para el aprendizaje supervisado, se utiliza como variable objetivo el diagnostico del paciente. Puesto que son tres condiciones diferentes, cada uno con distintos valores para el diagnostico, el análisis efectuado fue la construcción de tres modelos por separado en donde se usan todas las variables y registros de los datos y la variable objetivo fue el diagnostico de cada condición en particular. 
+ \medbreak
+ 
+ Puesto que los modelos son entrenados con la data proveniente de los distintos test suministrados y estos tienen a su vez una manera establecida para establecer el diagnostico, resulta poco interesante que el objetivo del análisis sea entrenar un modelo cuyo objetivo sea predecir la clase dado el set de datos. Por esta razón, el foco del presente análisis esta en la explicabilidad de los modelos, obteniendo de esta manera información en cuanto a que tan importantes son las distintas variables que constituyen el set de datos a la hora de efectuar los distintos diagnósticos de la condición; esto permite identificar que enunciados del test o atributos demográficos resultan determinantes a la hora de diagnosticar una condición.
+ 
+ \medbreak
+ 
+ El modelo escogido para el análisis fue un random forest. Para poder entrenar y evaluar dicho modelo, se separa la totalidad de los datos en el set de entrenamiento y set de test con una proporcion del 75\% y 25\% respectivamente.
+ 
+  \medbreak
+  
+ Para determinar los hiperparametros del modelo, se realizo  una grid search utilizando una validación cruzada de 3 particiones, buscando maximizar la medida de desempeño, en este caso el accuracy, teniendo en cuenta el numero de arboles, la profundidad de los arboles y el criterio de partición usando los valores de búsqueda presentes en la tabla \ref{table:hyperparameters}:
+ 
+ \begin{table}[ht]
+\centering
+\caption{Hiperparametros considerados en el Grid Search}
+ \begin{tabular}{ll}
+\toprule
+{} &    Hyperparameter Values \\
+\midrule
+Number of trees &  50, 100, 200, 500, 1000 \\
+Max depth       &           2, 4, 6, 8, 10 \\
+Criterion       &        'gini', 'entropy' \\
+\bottomrule
+\end{tabular}
+\label{table:hyperparameters}
+\end{table}%
+
+Una vez establecido los hiperparametros que otorgan una mayor accuracy, se procede a evaluar su desempeño en el set de test mediante el calculo del accuracy, así como la estimación de la importancia de las distintas variables para la estimación del modelo. Esta importancia es calculada para cada atributo, a partir de que tan bien es capaz dicho atributo de separar las clases objetivos, en este caso los diagnósticos para cada condición, según el valor que tome el atributo. Esta importancia es calculada para todos las variables del modelo y se ordenan de mayor a menor para apreciar cuales son las variables mas importantes a la hora de realizar la clasificación.
+
+ 
+\subsection{Aprendizaje no supervisado}
+
+Para el aprendizaje no supervisado, se procede a realizar un análisis de clusters con el objetivo de determinar posibles agrupaciones que puedan surgir a partir de la información contenida en los tests además de los datos demográficos, y comparar dichos clusters con las diagnósticos realizados para cada condición.
+
+ \medbreak
+
+Puesto que dentro del set de datos contamos  con datos mixtos, es decir, variables numéricas y categóricas, los métodos tradicionales de clustering no son suficientes para elaborar el análisis pues se centran en algún tipo especifico de variable. Por consiguiente, para elaborar el modelo de clustering, se recurre a un algoritmo conocido como  K-prototype.
+
+El concepto detrás de este algoritmo es homologo al de K-means \cite{huang1998extensions} : se establecen la pertenencia de cada registro a alguno de los n clusters a formar basado en la distancia que existe de entre dicho punto y el centroide del cluster. Esta distancia debe ser establecida para cada uno de las columnas que constituyen el dataset, teniendo pues una distancia de tantas dimensiones como variables se tengan. EL objetivo pues del algoritmo es minimizar una función de costo que computa las distancias entre los puntos y el centroide al que pertenece, reubicando los centroides en cada iteración. 
+
+ \medbreak
+
+Esta función de costo esta constituida por dos partes una para las distancias numéricas y otra para las distancias categóricas como lo enuncia la ecuación \ref{eqn}:
+
+\begin{equation} \label{eqn}
+	P(W, Q) =  \sum_{l=1}^{k} \bigg(\sum_{i=1}^{n} w_{il} \sum_{j=1}^{p} (x_{ij} - q_{lj})^2 + \gamma\sum_{i=1}^{n} w_{il}  \sum_{i=p+1}^{m}\delta(x_{ij} , q_{lj})\bigg)
+\end{equation}
+
+Donde :
+
+$k$  = Numero de clusters establecidos
+
+$n$  = Cantidad de registros en el set de datos
+
+$w_{il}$  = variable binaria que indica si el registro $i$  pertenece al cluster $l$ 
+
+$W$  = Es una matriz de dimensiones $n$ x $k$ que contiene las variables $w_{il}$ 
+
+$x_{ij}$ = valor del registro $i$  y la variable $j$ 
+
+$q_{lj}$  = valor del centroide para el cluster $l$  y la variable $j$
+
+$Q$  = Es una matriz de dimensiones $k$ x $p$ que contiene los centroides $q_{lj}$
+
+$p$  = Cantidad de atributos numéricos
+
+$m$  = Cantidad de atributos categóricos
+
+$\gamma$  = Peso que se utiliza para evitar favorecer alguno de los tipos de variables
+
+$\delta(x_{ij} , q_{lj})$  = Función de discrepancia entre el punto $x_{ij}$ y la moda $q_{lj}$ que es 0 si el valor coincide y 1 si no 
+
+ \medbreak
+
+A partir de esta función de costo, se concluye que para cada registro que constituye el set de datos $X$, es necesario hacer dos tipos de cálculos diferentes para estimar la distancia del registro respecto al centroide: Uno para las variables numéricas que sera las diferencias cuadradas y otra para las variables categóricas que sera la función de discrepancia. Así pues, el objetivo del algoritmo sera encontrar los valores de las variables $w_{il}$  y $q_{lj}$ que minimicen esta función de costo.
+
+ \medbreak
+
+El numero de clusters $k$  se escoge mediante la implementación del método del codo, el cual permite establecer el numero de óptimo a partir de la identificación de un quiebre significativo en la pendiente de la curva que tiene en el eje $x$  el numero de clusters y en el eje $y$  el costo.
+
+ \medbreak
+ 
+ Una vez entrenado que el modelo haya asignado cada paciente a un cluster, se procede para cada condición, a generar una matriz de confusión en donde se aprecie la coincidencia entre el diagnostico de la condición especifica y los clusters constituidos. Esta matriz a su vez servirá para calcular medidas de validación externa. En particular se calculara el criterio de Van Dongen, que calcula la pureza de la agrupación a partir del calculo de cuan cercana esta la matriz de confusión de tener un solo elemento por fila y columna, siendo 0 en este caso 1 en el extremo opuesto, es decir, clases por completo repartidas en todos los clusters \cite{van2000performance}; y además se calculara el índice de rand ajustado que mide, para dos conjuntos de clusters, que tan bien convergen las asignaciones de estos ajustado por el azar, es decir asignaciones aleatorias siendo 0 completamente aleatorio y 1 asignaciones idénticas \cite{hubert1985comparing}.
+
+ \medbreak
+ 
+ Para la visualización de los clusters, puesto que se cuenta con tantas dimensiones como variables, se procede a realizar una reducción de dimensionalidad de las variables originales, buscando encontrar una proyección en dos dimensiones que expliquen un porcentaje importante de la variación de los datos. Esto se consigue a través de la implementación del algoritmo FAMD que en términos generales combina las técnicas de PCA para las variables numéricas y MCA para las variables categóricas \cite{pages2002analyse}. Esta reducción de dimensionalidad se aplicara para visualizar los datos y a que cluster corresponden, así como una comparación de esta asignación, con el diagnostico para cada condición
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
