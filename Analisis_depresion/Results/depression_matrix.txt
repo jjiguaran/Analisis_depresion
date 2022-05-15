@@ -1,0 +1,12 @@
+\begin{tabular}{lrrrr}
+\toprule
+Clusters &     1 &     2 &     3 &     4 \\
+Depression\_Diagnosis &       &       &       &       \\
+\midrule
+Normal               &  0 &  0 &  7655 &  1198 \\
+Mild                 &  13 &  0 &  1836 &  1937 \\
+Moderate             &  209 &  7 &  1278 &  5583 \\
+Severe               &  1218 &  2803 &  267 &  2188 \\
+Extremely severe     &  7933 &  5619 &  15 &  0 \\
+\bottomrule
+\end{tabular}

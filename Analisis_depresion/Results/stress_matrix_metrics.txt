@@ -1,0 +1,7 @@
+\begin{tabular}{rr}
+\toprule
+ Van Dongen Criterion &  Adjusted Rand Score \\
+\midrule
+0.54 & 0.37 \\
+\bottomrule
+\end{tabular}

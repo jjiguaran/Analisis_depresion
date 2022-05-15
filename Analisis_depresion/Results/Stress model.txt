@@ -1,0 +1,7 @@
+\begin{tabular}{lllr}
+\toprule
+n\_estimators & max\_depth & criterion &  accuracy \\
+\midrule
+500 & 10 & entropy & 0.827264 \\
+\bottomrule
+\end{tabular}

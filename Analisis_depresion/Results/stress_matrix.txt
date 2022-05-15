@@ -1,0 +1,12 @@
+\begin{tabular}{lrrrr}
+\toprule
+Clusters &     1 &     2 &     3 &     4 \\
+Stress\_Diagnosis &       &       &       &       \\
+\midrule
+Normal           &  3 &  907 &  9743 &  1143 \\
+Mild             &  9 &  1114 &  1090 &  2708 \\
+Moderate         &  402 &  3442 &  212 &  4671 \\
+Severe           &  3745 &  2717 &  6 &  2102 \\
+Extremely severe &  5214 &  249 &  0 &  282 \\
+\bottomrule
+\end{tabular}

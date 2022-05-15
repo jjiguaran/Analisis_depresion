@@ -1,0 +1,7 @@
+\begin{tabular}{lllr}
+\toprule
+n\_estimators & max\_depth & criterion &  accuracy \\
+\midrule
+1000 & 10 & gini & 0.878471 \\
+\bottomrule
+\end{tabular}

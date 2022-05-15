@@ -1,0 +1,11 @@
+\begin{tabular}{llll}
+\toprule
+{} &  stress diagnosis & anxiety diagnosis & depression diagnosis \\
+Cluster &                   &                   &                      \\
+\midrule
+1       &  Extremely severe &  Extremely severe &  Extremely severe \\
+2       &  Moderate &  Severe &  Extremely severe \\
+3       &  Normal &  Normal &  Normal \\
+4       &  Moderate &  Moderate &  Moderate \\
+\bottomrule
+\end{tabular}

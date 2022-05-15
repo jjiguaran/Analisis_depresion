@@ -1,0 +1,12 @@
+\begin{tabular}{lrrrr}
+\toprule
+Clusters &     1 &     2 &     3 &     4 \\
+Anxiety\_Diagnosis &       &       &       &       \\
+\midrule
+Normal            &  0 &  1031 &  7928 &  766 \\
+Mild              &  0 &  549 &  1380 &  834 \\
+Moderate          &  10 &  2216 &  1519 &  3302 \\
+Severe            &  228 &  2561 &  213 &  3109 \\
+Extremely severe  &  9135 &  2072 &  11 &  2895 \\
+\bottomrule
+\end{tabular}

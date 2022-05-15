@@ -1,0 +1,68 @@
+\begin{tabular}{ll}
+\toprule
+       Field &                                                                                                                                                                                                  Description \\
+\midrule
+ Q1 &  I found myself getting upset by quite trivial things. \\
+ Q2 &  I was aware of dryness of my mouth. \\
+ Q3 &  'I couldn''t seem to experience any positive feeling at all.' \\
+ Q4 &  'I experienced breathing difficulty (eg, excessively rapid breathing, breathlessness in the absence of physical exertion).' \\
+ Q5 &  I just couldn't seem to get going. \\
+ Q6 &  I tended to over-react to situations. \\
+ Q7 &  'I had a feeling of shakiness (eg, legs going to give way).' \\
+ Q8 &  I found it difficult to relax. \\
+ Q9 &  I found myself in situations that made me so anxious I was most relieved when they ended. \\
+ Q10 &  I felt that I had nothing to look forward to. \\
+ Q11 &  I found myself getting upset rather easily. \\
+ Q12 &  I felt that I was using a lot of nervous energy. \\
+ Q13 &  I felt sad and depressed. \\
+ Q14 &  'I found myself getting impatient when I was delayed in any way (eg, elevators, traffic lights, being kept waiting).' \\
+ Q15 &  I had a feeling of faintness. \\
+ Q16 &  I felt that I had lost interest in just about everything. \\
+ Q17 &  I felt I wasn't worth much as a person. \\
+ Q18 &  I felt that I was rather touchy. \\
+ Q19 &  'I perspired noticeably (eg, hands sweaty) in the absence of high temperatures or physical exertion.' \\
+ Q20 &  I felt scared without any good reason. \\
+ Q21 &  I felt that life wasn't worthwhile. \\
+ Q22 &  I found it hard to wind down. \\
+ Q23 &  I had difficulty in swallowing. \\
+ Q24 &  I couldn't seem to get any enjoyment out of the things I did. \\
+ Q25 &  'I was aware of the action of my heart in the absence of physical exertion (eg, sense of heart rate increase, heart missing a beat).' \\
+ Q26 &  I felt down-hearted and blue. \\
+ Q27 &  I found that I was very irritable. \\
+ Q28 &  I felt I was close to panic. \\
+ Q29 &  I found it hard to calm down after something upset me. \\
+ Q30 &  I feared that I would be "thrown" by some trivial but unfamiliar task. \\
+ Q31 &  I was unable to become enthusiastic about anything. \\
+ Q32 &  I found it difficult to tolerate interruptions to what I was doing. \\
+ Q33 &  I was in a state of nervous tension. \\
+ Q34 &  I felt I was pretty worthless. \\
+ Q35 &  I was intolerant of anything that kept me from getting on with what I was doing. \\
+ Q36 &  I felt terrified. \\
+ Q37 &  I could see nothing in the future to be hopeful about. \\
+ Q38 &  I felt that life was meaningless. \\
+ Q39 &  I found myself getting agitated. \\
+ Q40 &  I was worried about situations in which I might panic and make a fool of myself. \\
+ Q41 &  'I experienced trembling (eg, in the hands).' \\
+ Q42 &  I found it difficult to work up the initiative to do things. \\
+ TIPI1 &  'Extraverted, enthusiastic.' \\
+ TIPI2 &  'Critical, quarrelsome.' \\
+ TIPI3 &  'Dependable, self-disciplined.' \\
+ TIPI4 &  'Anxious, easily upset.' \\
+ TIPI5 &  'Open to new experiences, complex.' \\
+ TIPI6 &  'Reserved, quiet.' \\
+ TIPI7 &  'Sympathetic, warm.' \\
+ TIPI8 &  'Disorganized, careless.' \\
+ TIPI9 &  'Calm, emotionally stable.' \\
+ TIPI10 &  'Conventional, uncreative.' \\
+ education &  '"How much education have you completed?", 1=Less than high school, 2=High school, 3=University degree, 4=Graduate degree' \\
+ urban &  '"What type of area did you live when you were a child?", 1=Rural (country side), 2=Suburban, 3=Urban (town, city)' \\
+ gender &  '"What is your gender?", 1=Male, 2=Female, 3=Other' \\
+ age &  How many years old are you? \\
+ religion &  '"What is your religion?", 1=Agnostic, 2=Atheist, 3=Buddhist, 4=Christian (Catholic), 5=Christian (Mormon), 6=Christian (Protestant), 7=Christian (Other), 8=Hindu, 9=Jewish, 10=Muslim, 11=Sikh, 12=Other' \\
+ orientation &  '"What is your sexual orientation?", 1=Heterosexual, 2=Bisexual, 3=Homosexual, 4=Asexual, 5=Other' \\
+ race &  '"What is your race?", 10=Asian, 20=Arab, 30=Black, 40=Indigenous Australian, 50=Native American, 60=White, 70=Other' \\
+ married &  '"What is your marital status?", 1=Never married, 2=Currently married, 3=Previously married' \\
+ familysize &  '"Including you, how many children did your mother have?"' \\
+ major &  '"If you attended a university, what was your major (e.g. "psychology", "English", "civil engineering")?"' \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,9 @@
+\begin{tabular}{lrrr}
+\toprule
+{} &  Stress &  Anxiety &  Depression \\
+\midrule
+Stress     &  1.00 &  0.80 &  0.74 \\
+Anxiety    &  0.80 &  1.00 &  0.67 \\
+Depression &  0.74 &  0.67 &  1.00 \\
+\bottomrule
+\end{tabular}

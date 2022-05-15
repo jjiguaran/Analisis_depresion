@@ -1,0 +1,30 @@
+organigrama proyecto
+1) definir el tema de salud mental a tratar:
+siento hasta el momento que el tema mas relevante es ansiedad/depresion, pues me interpelan persoalmente, siento que tiene potencial de generar un impacto publico y se puede expandir como tema de tesis utilizando nlp con redes sociales e indicadores socieconomicos
+2)enfoque del proyecto:
+A partir de un dataset en donde se posea atributos persoonales tales como edad, genero, ingresos, estilo de vida, etc.. aplicar tecnicas de aprendizaje no supervidado tales como reduccion de dimensionalidad y clusterizacion para encontrar patrones relevantes respecto al tema de la depresion
+3) buscar fuentes de datos con data relevante acerca de salud mental y depresion:
+https://www.kaggle.com/
+https://data.world/
+https://www.samhsa.gov/
+https://catalog.data.gov/
+https://data.cdc.gov/
+https://guides.library.ucla.edu/psychology/data
+https://github.com/kharrigian/mental-health-datasets ---- tesis
+3) encontrar un dataset con suficiente informacion sobre el tema de salud mental:
+
+https://www.kaggle.com/:
+https://www.kaggle.com/anth7310/mental-health-in-the-tech-industry
+https://www.kaggle.com/diegobabativa/depression
+https://www.kaggle.com/babyoda/depression-in-married-couples
+https://www.kaggle.com/mpwolke/cusersmarildownloadsanxietycsv
+https://www.kaggle.com/lucasgreenwell/depression-anxiety-stress-scales-responses?select=data.csv !!!
+https://www.kaggle.com/karrychan/depression-score?select=Depression_data.xlsx
+https://kaggle.com/lucasgreenwell/manifest-anxiety-scale-responses?select=data.csvanxietyanxiety
+
+
+https://data.world/
+https://data.world/vizzup/mental-health-depression-disorder-data/workspace/file?filename=Mental+health+Depression+disorder+Data.xlsx
+
+*) referencias:
+https://www.kaggle.com/francescoronzano/spanish-tweets-suggesting-depression

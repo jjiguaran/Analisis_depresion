@@ -1,0 +1,11 @@
+\begin{tabular}{lrrr}
+\toprule
+{} &  Depression &  Anxiety &  Stress \\
+\midrule
+Normal           &  0 &  0 &  0 \\
+Mild             &  10 &  8 &  15 \\
+Moderate         &  14 &  10 &  19 \\
+Severe           &  21 &  15 &  26 \\
+Extremely severe &  28 &  20 &  34 \\
+\bottomrule
+\end{tabular}
